@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>android ball</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        .ball {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const images = [
+            'https://i.ibb.co/1TsstBc/Android-15.png',
+            'https://i.ibb.co/gd15yKW/Android-14.png',
+            'https://i.ibb.co/xqMGQCX/Android-13.png',
+            'https://i.ibb.co/K64yHF6/Android-12.png',
+            'https://i.ibb.co/tprrVQh/Android-11.png',
+            'https://i.ibb.co/JkVHLRV/Android-10.png',
+            'https://i.ibb.co/ngL54qb/Android-9.png',
+            'https://i.ibb.co/CHxQtRS/Android-8-1.png',
+            'https://i.ibb.co/SfjzY7Z/Android-8.png',
+            'https://i.ibb.co/j8pbPKC/Android-7.png',
+            'https://i.ibb.co/6ZMWtFc/Android-6.png',
+            'https://i.ibb.co/hZJTHKL/Android-5.png',
+            'https://i.ibb.co/smztHZt/Android-4.png',
+            'https://i.ibb.co/m5qhvwy/Android-3.png',
+            'https://i.ibb.co/2NfBjXS/Android-2.png',
+            'https://i.ibb.co/f4hKdJc/Android-1.png'
+        ];
+
+        const balls = [];
+        const numBalls = images.length;
+
+        for (let i = 0; i < numBalls; i++) {
+            const ball = document.createElement('div');
+            ball.classList.add('ball');
+            ball.style.backgroundImage = `url(${images[i]})`;
+            ball.style.left = `${Math.random() * window.innerWidth}px`;
+            ball.style.top = `${Math.random() * window.innerHeight}px`;
+            document.body.appendChild(ball);
+
+            balls.push({
+                element: ball,
+                x: parseFloat(ball.style.left),
+                y: parseFloat(ball.style.top),
+                vx: (Math.random() - 0.5) * 10,
+                vy: (Math.random() - 0.5) * 10 
+            });
+        }
+
+        function moveBalls() {
+            balls.forEach(ball => {
+                ball.x += ball.vx;
+                ball.y += ball.vy;
+
+                if (ball.x + ball.element.clientWidth > window.innerWidth || ball.x < 0) {
+                    ball.vx = -ball.vx;
+                }
+                if (ball.y + ball.element.clientHeight > window.innerHeight || ball.y < 0) {
+                    ball.vy = -ball.vy;
+                }
+
+                ball.element.style.left = ball.x + 'px';
+                ball.element.style.top = ball.y + 'px';
+            });
+
+            requestAnimationFrame(moveBalls);
+        }
+
+        function requestFullScreen() {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+                document.documentElement.msRequestFullscreen();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            requestFullScreen();
+            moveBalls();
+        });
+    </script>
+</body>
+</html>
