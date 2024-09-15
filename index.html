@@ -15,8 +15,8 @@
             position: absolute;
             width: 50px;
             height: 50px;
-            background-size: contain; 
-            background-repeat: no-repeat; 
+            background-size: contain;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
@@ -41,6 +41,7 @@
             'https://i.ibb.co/f4hKdJc/Android-1.png'
         ];
 
+        const errorImage = 'https://i.ibb.co/Htz6W63/Error.png';
         const balls = [];
         const numBalls = images.length;
 
@@ -48,7 +49,7 @@
             const ball = document.createElement('div');
             ball.classList.add('ball');
             ball.style.backgroundImage = `url(${images[i]})`;
-            ball.style.left = `${Math.random() * (window.innerWidth - 50)}px`; 
+            ball.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
             ball.style.top = `${Math.random() * (window.innerHeight - 50)}px`; 
             document.body.appendChild(ball);
 
@@ -59,6 +60,23 @@
                 vx: (Math.random() - 0.5) * 10, 
                 vy: (Math.random() - 0.5) * 10  
             });
+        }
+
+        function checkImages() {
+            let allImagesLoaded = true;
+            balls.forEach(ball => {
+                const img = new Image();
+                img.src = ball.element.style.backgroundImage.slice(5, -2);
+                img.onerror = () => {
+                    allImagesLoaded = false;
+                };
+            });
+
+            if (!allImagesLoaded) {
+                balls.forEach(ball => {
+                    ball.element.style.backgroundImage = `url(${errorImage})`;
+                });
+            }
         }
 
         function moveBalls() {
@@ -98,10 +116,11 @@
         });
 
         document.addEventListener('DOMContentLoaded', (event) => {
+            checkImages();
             moveBalls();
         });
     </script>
-    <!-- No source code theft -->
+        <!-- No source code theft -->
     <!-- If you want to use it, please contact 125435yhgt@gmail.com -->
 </body>
 </html>
