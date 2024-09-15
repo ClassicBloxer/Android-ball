@@ -16,7 +16,8 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
@@ -57,7 +58,7 @@
                 x: parseFloat(ball.style.left),
                 y: parseFloat(ball.style.top),
                 vx: (Math.random() - 0.5) * 10,
-                vy: (Math.random() - 0.5) * 10  
+                vy: (Math.random() - 0.5) * 10
             });
         }
 
@@ -81,14 +82,15 @@
         }
 
         function requestFullScreen() {
-            if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen();
-            } else if (document.documentElement.mozRequestFullScreen) { // Firefox
-                document.documentElement.mozRequestFullScreen();
-            } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                document.documentElement.webkitRequestFullscreen();
-            } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
-                document.documentElement.msRequestFullscreen();
+            const docEl = document.documentElement;
+            if (docEl.requestFullscreen) {
+                docEl.requestFullscreen();
+            } else if (docEl.mozRequestFullScreen) {
+                docEl.mozRequestFullScreen();
+            } else if (docEl.webkitRequestFullscreen) {
+                docEl.webkitRequestFullscreen();
+            } else if (docEl.msRequestFullscreen) {
+                docEl.msRequestFullscreen();
             }
         }
 
