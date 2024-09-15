@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>android ball</title>
+    <title>Android Ball</title>
     <link rel="icon" href="https://i.ibb.co/f4hKdJc/Android-1.png" type="image/x-icon">
     <style>
         body {
@@ -16,8 +16,8 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-size: contain; 
+            background-repeat: no-repeat; 
         }
     </style>
 </head>
@@ -49,16 +49,16 @@
             const ball = document.createElement('div');
             ball.classList.add('ball');
             ball.style.backgroundImage = `url(${images[i]})`;
-            ball.style.left = `${Math.random() * window.innerWidth}px`;
-            ball.style.top = `${Math.random() * window.innerHeight}px`;
+            ball.style.left = `${Math.random() * (window.innerWidth - 50)}px`; 
+            ball.style.top = `${Math.random() * (window.innerHeight - 50)}px`; 
             document.body.appendChild(ball);
 
             balls.push({
                 element: ball,
                 x: parseFloat(ball.style.left),
                 y: parseFloat(ball.style.top),
-                vx: (Math.random() - 0.5) * 10,
-                vy: (Math.random() - 0.5) * 10
+                vx: (Math.random() - 0.5) * 10, // 減慢速度
+                vy: (Math.random() - 0.5) * 10  // 減慢速度
             });
         }
 
@@ -85,11 +85,11 @@
             const docEl = document.documentElement;
             if (docEl.requestFullscreen) {
                 docEl.requestFullscreen();
-            } else if (docEl.mozRequestFullScreen) {
+            } else if (docEl.mozRequestFullScreen) { 
                 docEl.mozRequestFullScreen();
-            } else if (docEl.webkitRequestFullscreen) {
+            } else if (docEl.webkitRequestFullscreen) { 
                 docEl.webkitRequestFullscreen();
-            } else if (docEl.msRequestFullscreen) {
+            } else if (docEl.msRequestFullscreen) { 
                 docEl.msRequestFullscreen();
             }
         }
