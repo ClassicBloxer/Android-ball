@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>android ball</title>
+    <title>Android ball</title>
     <link rel="icon" href="https://i.ibb.co/f4hKdJc/Android-1.png" type="image/x-icon">
     <style>
         body {
@@ -56,8 +56,8 @@
                 element: ball,
                 x: parseFloat(ball.style.left),
                 y: parseFloat(ball.style.top),
-                vx: (Math.random() - 0.5) * 10,
-                vy: (Math.random() - 0.5) * 10 
+                vx: (Math.random() - 0.5) * 10, 
+                vy: (Math.random() - 0.5) * 10  
             });
         }
 
@@ -92,8 +92,11 @@
             }
         }
 
-        document.addEventListener('DOMContentLoaded', (event) => {
+        document.addEventListener('click', () => {
             requestFullScreen();
+        });
+
+        document.addEventListener('DOMContentLoaded', (event) => {
             moveBalls();
         });
     </script>
