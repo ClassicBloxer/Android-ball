@@ -10,12 +10,16 @@
             margin: 0;
             overflow: hidden;
             background-color: black;
+            background-image: url('https://i.ibb.co/Wx3XHxH/Android-logo.jpg');
+            background-size: cover;
+            background-position: center; 
         }
         .ball {
             position: absolute;
             width: 50px;
             height: 50px;
-            background-size: contain;
+            border-radius: 50%;
+            background-size: contain; 
             background-repeat: no-repeat;
         }
     </style>
@@ -51,14 +55,14 @@
             ball.style.backgroundImage = `url(${images[i]})`;
             ball.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
             ball.style.top = `${Math.random() * (window.innerHeight - 50)}px`; 
-            document.body.appendChild(ball);
+              document.body.appendChild(ball);
 
             balls.push({
                 element: ball,
                 x: parseFloat(ball.style.left),
                 y: parseFloat(ball.style.top),
                 vx: (Math.random() - 0.5) * 10, 
-                vy: (Math.random() - 0.5) * 10  
+                vy: (Math.random() - 0.5) * 10
             });
         }
 
@@ -120,7 +124,5 @@
             moveBalls();
         });
     </script>
-        <!-- No source code theft -->
-    <!-- If you want to use it, please contact 125435yhgt@gmail.com -->
 </body>
 </html>
