@@ -7,4 +7,5 @@ The inspiration of Android ball comes from bouncy ball. I try to use it when the
 ClassicBloxer Responsible for code creation.  
 Copilot ai Responsible for providing ideas.
 
-https://android-ball.netlify.app/  
+# Connections
+> https://android-ball.netlify.app/  
