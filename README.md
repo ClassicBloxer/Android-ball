@@ -9,3 +9,8 @@ Copilot ai Responsible for providing ideas.
 
 # Connections
 > https://android-ball.netlify.app/  
+
+# note
+> Source code can be provided. If you would like to provide it, please contact 125435yhgt@gmail.com
+
+
