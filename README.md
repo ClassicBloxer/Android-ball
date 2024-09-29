@@ -7,8 +7,11 @@ The inspiration of Android ball comes from bouncy ball. I try to use it when the
 ClassicBloxer Responsible for code creation.  
 Copilot ai Responsible for providing ideas.
 
-# Connections
-> https://android-ball.netlify.app/  
+# Website and Downloads
+> <a href="https://android-ball.netlify.app/" class="button pill">This is a pill button</a>
+
+
+
 
 # note
 > Source code can be provided. If you would like to provide it, please contact 125435yhgt@gmail.com
