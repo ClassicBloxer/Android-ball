@@ -8,7 +8,7 @@ ClassicBloxer Responsible for code creation.
 Copilot ai Responsible for providing ideas.
 
 # Website and Downloads
-> <a href="https://android-ball.netlify.app/" class="button pill">This is a pill button</a>
+<a href="https://android-ball.netlify.app/" class="button pill">Website</a>
 
 
 
