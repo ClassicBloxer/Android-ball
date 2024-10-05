@@ -10,7 +10,8 @@ Copilot ai Responsible for providing ideas.
 # Website and Downloads
 <a href="https://android-ball.netlify.app/" class="button pill">Website</a>
 
-<a href="https://cdn.discordapp.com/attachments/1246031624236306453/1289808241152491551/com.system.android.ball_1.0.apk?ex=66fa2b08&is=66f8d988&hm=99365b4ce1eb8c3fb11060d96a2c6058bd8bf369b0fc32b32d292e8d230b5884&" class="button pill">Download</a>
+<a href="https://github.com/ClassicBloxer/Android-ball/tree/main/Download
+" class="button pill">Download</a>
 
 
 
