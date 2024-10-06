@@ -9,7 +9,7 @@ Copilot ai Responsible for providing ideas.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<h1 align="center">Website and Downloads and Code</h1>
+<h1 align="center">Website and Download</h1>
 <a href="https://android-ball.netlify.app/" class="button pill">Website</a>
 
 <a href="https://github.com/ClassicBloxer/Android-ball/tree/main/Download
