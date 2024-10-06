@@ -15,11 +15,6 @@ Copilot ai Responsible for providing ideas.
 <a href="https://github.com/ClassicBloxer/Android-ball/tree/main/Download
 " class="button pill">Download</a>
 
-```sh
-curl -sL https://raw.githubusercontent.com/ClassicBloxer/Android-ball/refs/heads/main/Termux/Download-android-ball.sh -o Download-android-ball.sh && chmod +x Download-android-ball.sh && ./Download-android-ball.sh
-
-```
-
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <h1 align="center">Note</h1>
